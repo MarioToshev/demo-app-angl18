@@ -1,0 +1,16 @@
+<div class="chart-container">
+  <h2>Home component - Random Cat pic</h2>
+
+  <div *ngIf="isloading">
+    <p>Loading...</p>
+  </div>
+  <div *ngIf="data$ | async as cats">
+    <pre>{{ cats | json }}</pre>
+    <img [src]="cats[0].url" alt="Random Cat" height="100px" width="100px" />
+  </div>
+</div>
+
+<br />
+
+<button routerLink="dogs">See dog page.</button>
+<button (click)="fetchNewCat()">New pic.</button>
