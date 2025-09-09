@@ -6,6 +6,7 @@ import { DogServiceService } from '../../services/dog-service.service';
 import { JsonPipe, AsyncPipe, CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
+
 @Component({
   selector: 'app-dogpage',
   standalone: true,

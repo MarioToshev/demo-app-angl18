@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.fetchNewCat();
   }
+
   fetchNewCat() {
     this.isloading = true;
     this.data$ = this.catApi.getCats().pipe(
@@ -31,4 +32,6 @@ export class HomeComponent implements OnInit {
       })
     );
   }
+
+
 }
